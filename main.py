@@ -4,7 +4,7 @@ from time import perf_counter
 
 pg.init()
 pg.mixer.init()
-screen_size = (1920, 1080)
+screen_size = (2560, 1440)
 pg.display.set_caption("Bezi")
 
 globs.init(screen_size)

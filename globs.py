@@ -26,4 +26,4 @@ def init(screen):
     sound = SoundHandler()
 
     global MAX_FPS
-    MAX_FPS = 60
+    MAX_FPS = 300

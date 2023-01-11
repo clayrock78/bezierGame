@@ -11,7 +11,7 @@ class Renderer:
     def __init__(self, screen_size):
         self.scaling = 2
         self.screen_size = screen_size
-        self.display = pg.display.set_mode((1920, 1080), pg.RESIZABLE)
+        self.display = pg.display.set_mode(screen_size, pg.FULLSCREEN)
         self.lower_res = (
             self.screen_size[0] / self.scaling,
             self.screen_size[1] / self.scaling,
@@ -77,7 +77,7 @@ class Renderer:
 
     def display_fps(self):
         fps = globs.clock.get_fps()
-        fps = bytes(f"FPS:{fps:.3}", encoding="utf-8")
+        fps = bytes(f"FPS:{int(fps)}", encoding="utf-8")
         font_text = fonts.FPS_FONT.render(fps, True, colors.WHITE)
         font_rect = font_text.get_rect(top=0, left=0)
         self.screen.blit(font_text, font_rect)
